@@ -1,0 +1,25 @@
+---
+source: crates/rs_db_parser/src/ast/commands/insert.rs
+description: "Input: INSERT INTO test_table (id, name) VALUES ( 2, 'test asdasd', '3') "
+expression: s
+---
+  × Parse Error
+   ╭────
+ 1 │ INSERT INTO test_table (id, name) VALUES ( 2, 'test asdasd', '3') 
+   ·                                                            ▲
+   ·                                                            ╰── expected ')'
+   ╰────
+
+Error:   × Parse Error Context
+   ╭────
+ 1 │ INSERT INTO test_table (id, name) VALUES ( 2, 'test asdasd', '3') 
+   ·                                          ▲
+   ·                                          ╰── in section "Column Values"
+   ╰────
+Error:   × Parse Error Context
+   ╭────
+ 1 │ INSERT INTO test_table (id, name) VALUES ( 2, 'test asdasd', '3') 
+   ·                       ▲
+   ·                       ╰── in section "Insert Statement"
+   ╰────
+

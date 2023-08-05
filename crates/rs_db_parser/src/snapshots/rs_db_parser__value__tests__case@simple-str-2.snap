@@ -1,0 +1,16 @@
+---
+source: crates/rs_db_parser/src/value.rs
+description: "Input: 'hello world'\nType: VarChar(50)"
+expression: v
+---
+(
+    LocatedSpan {
+        offset: 0,
+        line: 1,
+        fragment: "'hello world'",
+        extra: (),
+    },
+    VarChar(
+        "hello world",
+    ),
+)

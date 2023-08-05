@@ -1,0 +1,16 @@
+---
+source: crates/rs_db_parser/src/value.rs
+description: "Input: 19\nType: U8"
+expression: v
+---
+(
+    LocatedSpan {
+        offset: 0,
+        line: 1,
+        fragment: "19",
+        extra: (),
+    },
+    U8(
+        19,
+    ),
+)

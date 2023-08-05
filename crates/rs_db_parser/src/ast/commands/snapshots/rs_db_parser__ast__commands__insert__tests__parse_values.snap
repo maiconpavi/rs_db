@@ -1,0 +1,44 @@
+---
+source: crates/rs_db_parser/src/ast/commands/insert.rs
+expression: values
+---
+[
+    (
+        LocatedSpan {
+            offset: 2,
+            line: 1,
+            fragment: "id",
+            extra: (),
+        },
+        (
+            LocatedSpan {
+                offset: 21,
+                line: 1,
+                fragment: "1",
+                extra: (),
+            },
+            I32(
+                1,
+            ),
+        ),
+    ),
+    (
+        LocatedSpan {
+            offset: 6,
+            line: 1,
+            fragment: "name",
+            extra: (),
+        },
+        (
+            LocatedSpan {
+                offset: 24,
+                line: 1,
+                fragment: "'test'",
+                extra: (),
+            },
+            VarChar(
+                "test",
+            ),
+        ),
+    ),
+]

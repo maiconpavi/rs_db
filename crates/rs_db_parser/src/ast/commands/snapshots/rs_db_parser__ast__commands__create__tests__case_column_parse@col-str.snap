@@ -1,0 +1,24 @@
+---
+source: crates/rs_db_parser/src/ast/commands/create.rs
+description: "Input: column_name varchar(10)"
+expression: value
+---
+RawColumn {
+    name: LocatedSpan {
+        offset: 0,
+        line: 1,
+        fragment: "column_name",
+        extra: (),
+    },
+    tp: (
+        LocatedSpan {
+            offset: 12,
+            line: 1,
+            fragment: "varchar(10)",
+            extra: (),
+        },
+        VarChar(
+            10,
+        ),
+    ),
+}

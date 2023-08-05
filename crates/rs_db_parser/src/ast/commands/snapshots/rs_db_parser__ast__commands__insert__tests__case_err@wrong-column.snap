@@ -1,0 +1,20 @@
+---
+source: crates/rs_db_parser/src/ast/commands/insert.rs
+description: "Input: INSERT INTO test_table (id, age) VALUES ( 2, 3) "
+expression: s
+---
+  × Parse Error
+   ╭────
+ 1 │ INSERT INTO test_table (id, age) VALUES ( 2, 3) 
+   ·                             ▲
+   ·                             ╰── external error:
+  Column not found
+   ╰────
+
+Error:   × Parse Error Context
+   ╭────
+ 1 │ INSERT INTO test_table (id, age) VALUES ( 2, 3) 
+   ·                       ▲
+   ·                       ╰── in section "Insert Statement"
+   ╰────
+

@@ -1,0 +1,22 @@
+---
+source: crates/rs_db_parser/src/ast/commands/create.rs
+description: "Input: iD int8"
+expression: value
+---
+RawColumn {
+    name: LocatedSpan {
+        offset: 0,
+        line: 1,
+        fragment: "iD",
+        extra: (),
+    },
+    tp: (
+        LocatedSpan {
+            offset: 3,
+            line: 1,
+            fragment: "int8",
+            extra: (),
+        },
+        I8,
+    ),
+}

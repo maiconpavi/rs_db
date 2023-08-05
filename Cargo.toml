@@ -1,0 +1,21 @@
+[package]
+name = "rs_db"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rs_db_parser = { path = "crates/rs_db_parser" }
+
+
+[workspace]
+members = ["crates/*"]
+
+[workspace.dependencies]
+derive_more = "0.99.17"
+bigdecimal = { version = "0.4.1", features = ["serde"] }
+miette = { version = "5.9.0", features = ["fancy"] }
+serde = { version = "1.0.171", features = ["derive"] }
+thiserror = "1.0.43"
+
+[dev-dependencies]
+insta = { version = "1.31.0", features = ["json"] }

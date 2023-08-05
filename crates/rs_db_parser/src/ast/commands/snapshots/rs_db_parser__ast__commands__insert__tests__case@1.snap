@@ -1,0 +1,53 @@
+---
+source: crates/rs_db_parser/src/ast/commands/insert.rs
+description: "Input: INSERT INTO test_table (id, name) VALUES ( 2, 'test asdasd') "
+expression: statement
+---
+Statement {
+    table_name: LocatedSpan {
+        offset: 12,
+        line: 1,
+        fragment: "test_table",
+        extra: (),
+    },
+    values: [
+        (
+            LocatedSpan {
+                offset: 24,
+                line: 1,
+                fragment: "id",
+                extra: (),
+            },
+            (
+                LocatedSpan {
+                    offset: 43,
+                    line: 1,
+                    fragment: "2",
+                    extra: (),
+                },
+                I32(
+                    2,
+                ),
+            ),
+        ),
+        (
+            LocatedSpan {
+                offset: 28,
+                line: 1,
+                fragment: "name",
+                extra: (),
+            },
+            (
+                LocatedSpan {
+                    offset: 46,
+                    line: 1,
+                    fragment: "'test asdasd'",
+                    extra: (),
+                },
+                VarChar(
+                    "test asdasd",
+                ),
+            ),
+        ),
+    ],
+}

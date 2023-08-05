@@ -1,0 +1,32 @@
+---
+source: crates/rs_db_parser/src/ast/commands/create.rs
+description: "Input: CREATE TABLE table_name (id int8)"
+expression: value
+---
+Statement {
+    table_name: LocatedSpan {
+        offset: 0,
+        line: 1,
+        fragment: "table_name",
+        extra: (),
+    },
+    columns: [
+        RawColumn {
+            name: LocatedSpan {
+                offset: 25,
+                line: 1,
+                fragment: "id",
+                extra: (),
+            },
+            tp: (
+                LocatedSpan {
+                    offset: 28,
+                    line: 1,
+                    fragment: "int8",
+                    extra: (),
+                },
+                I8,
+            ),
+        },
+    ],
+}
